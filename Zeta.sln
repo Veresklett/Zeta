@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zeta", "Zeta.csproj", "{FEC2A92B-545E-4451-BD2F-3BD9C234969F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.csproj", "{FC166DA0-E974-4A05-8BC4-9DB44C35CE75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FEC2A92B-545E-4451-BD2F-3BD9C234969F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEC2A92B-545E-4451-BD2F-3BD9C234969F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEC2A92B-545E-4451-BD2F-3BD9C234969F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC166DA0-E974-4A05-8BC4-9DB44C35CE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC166DA0-E974-4A05-8BC4-9DB44C35CE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC166DA0-E974-4A05-8BC4-9DB44C35CE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC166DA0-E974-4A05-8BC4-9DB44C35CE75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

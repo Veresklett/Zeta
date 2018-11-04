@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Zeta.Extensions;
 
 namespace Zeta
 {
@@ -18,6 +19,9 @@ namespace Zeta
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureAuthentication(Configuration);
+            services.ConfigureCORS();
+
             services.AddMvc();
 
             // In production, the Angular files will be served from this directory
@@ -38,6 +42,9 @@ namespace Zeta
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseAuthentication();
+            app.UseCors("EnableCORS");
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();

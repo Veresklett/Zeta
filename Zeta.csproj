@@ -15,6 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.0.0-preview1-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,36 @@
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\app-routing.module.ts" />
+    <None Remove="ClientApp\src\app\check.component.ts" />
+    <None Remove="ClientApp\src\app\_guards\auth-guard.ts" />
+    <None Remove="ClientApp\src\app\_modules\account\account-routing.module.ts" />
+    <None Remove="ClientApp\src\app\_modules\account\account.module.ts" />
+    <None Remove="ClientApp\src\app\_modules\account\components\account\account.component.ts" />
+    <None Remove="ClientApp\src\app\_modules\account\components\login\login.component.ts" />
+    <None Remove="ClientApp\src\app\_modules\home\components\home\home.component.ts" />
+    <None Remove="ClientApp\src\app\_modules\home\home-routing,module.ts" />
+    <None Remove="ClientApp\src\app\_modules\home\home.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\check.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_guards\auth-guard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\account\account-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\account\account.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\account\components\account\account.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\account\components\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\home\components\home\home.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\home\home-routing,module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_modules\home\home.module.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
